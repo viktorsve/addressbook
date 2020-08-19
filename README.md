@@ -25,7 +25,7 @@ foo@bar:~$ docker-compose up -d
 
 ### Database
 
-You need to change the environment variables in .env in order to connect Node.js to your database:
+You need to change the environment variables in .env.example and rename it to .env in order to connect Node.js to your database:
 
 ```javascript
 DB_USER = "<user>";
@@ -60,5 +60,6 @@ npm run dev
 
 ## To Do
 
-- Add unit tests
-- Add functionality for creating contacts
+- Add unit tests.
+- Add functionality for creating contacts.
+- Move the server to it's own folder and split it up into different controllers and routes.
