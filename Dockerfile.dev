@@ -1,0 +1,21 @@
+FROM node AS dev
+
+EXPOSE 5000 3000
+
+WORKDIR /app
+
+COPY package.json .
+
+RUN npm install
+
+WORKDIR /app/client
+
+COPY ./client/package.json .
+
+RUN npm install
+
+WORKDIR /app
+
+COPY . .
+
+CMD ["npm", "run", "dev"]

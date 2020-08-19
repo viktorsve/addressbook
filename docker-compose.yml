@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+  addressbook:
+    image: viktorsve/addressbook:dev
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - .:/app
+    ports:
+      - "5000:5000"
+      - "3000:3000"
+    container_name: addressbook
+    restart: unless-stopped
+    environment:
+      - DB_USER=postgres
+      - DB_HOST=postgres
+      - DB_DATABASE=postgres
+      - DB_PASSWORD=password
+      - DB_PORT=5432

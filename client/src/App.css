@@ -1,0 +1,84 @@
+body {
+  background: #212529 !important;
+}
+
+.table {
+  table-layout: fixed;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin: 3em;
+}
+
+.wrapper {
+  margin: 0px 10%;
+}
+
+th {
+  color: #ef631a;
+}
+
+.pagination {
+  justify-content: flex-end;
+}
+
+.search-label {
+  display: flex !important;
+  justify-content: center;
+  margin-bottom: 1.5em;
+}
+
+#search-bar-0 {
+  width: 50% !important;
+}
+
+.header-sm {
+  width: 20%;
+}
+
+.phone-cell {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  left: 1px;
+  top: 1px;
+  border-left: none !important;
+  border-top: none !important;
+}
+
+.phone-data {
+  display: inline;
+  padding: 0px !important;
+  overflow: hidden;
+}
+
+.fa-pencil {
+  position: relative;
+  top: 5px;
+  font-size: 0.875em !important;
+}
+
+/* https://codepen.io/zitrusfrisch/pen/fjbal */
+.title {
+  font: 700 4em/1 "Oswald", sans-serif;
+  text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+  background: url(http://f.cl.ly/items/010q3E1u3p2Q0j1L1S1o/animated_text_fill.png)
+    repeat-y;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: aitf 80s linear infinite;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+}
+
+@keyframes aitf {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
