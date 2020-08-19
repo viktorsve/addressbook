@@ -17,7 +17,7 @@ const App = () => {
       .then(data => {
         setContacts(data);
       });
-  }, [setContacts]);
+  }, []);
 
   const updatePhone = (id, phone) => {
     fetch('/api/updatePhone', {
