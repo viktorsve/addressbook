@@ -28,11 +28,11 @@ foo@bar:~$ docker-compose up -d
 You need to change the environment variables in .env.example and rename it to .env in order to connect Node.js to your database:
 
 ```javascript
-DB_USER = "<user>";
-DB_PASSWORD = "<password>";
-DB_HOST = "<host>";
-DB_PORT = "<port>";
-DB_DATABASE = "<database>";
+DB_USER=<user>
+DB_PASSWORD=<password>
+DB_HOST=<host>
+DB_PORT=<port>
+DB_DATABASE=<database>
 ```
 
 Execute ./init.sql to create the tables needed and add sample data to the database.
